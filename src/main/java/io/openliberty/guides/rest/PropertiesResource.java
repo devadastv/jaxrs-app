@@ -34,36 +34,4 @@ public class PropertiesResource {
 	  return new ResponseItem("/employee/{id}", "dummy description"); 
 	}
 
-
-	@Path("/department") 
-	@GET 
-	@Produces(MediaType.APPLICATION_JSON) 
-	public ResponseItem get__department() { 
-	  return new ResponseItem("/department", "dummy description"); 
-	}
-
-
-	@Path("/department/{id}") 
-	@GET 
-	@Produces(MediaType.APPLICATION_JSON) 
-	public ResponseItem get__department__id_() { 
-	  return new ResponseItem("/department/{id}", "dummy description"); 
-	}
-
-
-	@Path("hello") 
-	@GET 
-	@Produces(MediaType.APPLICATION_JSON) 
-	public ResponseItem get_hello() { 
-	  return new ResponseItem("hello", "dummy description"); 
-	}
-
-
-	@Path("/hello/there/and/") 
-	@GET 
-	@Produces(MediaType.APPLICATION_JSON) 
-	public ResponseItem get__hello_there_and_() { 
-	  return new ResponseItem("/hello/there/and/", "dummy description"); 
-	}
-
 }
