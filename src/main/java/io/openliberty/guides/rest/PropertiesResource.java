@@ -42,4 +42,13 @@ public class PropertiesResource {
 	  return new ResponseItem("/department/{id}", "dummy description"); 
 	}
 
+
+
+	@Path("/devadas") 
+	@GET 
+	@Produces(MediaType.APPLICATION_JSON) 
+	public ResponseItem get__devadas() { 
+	  return new ResponseItem("/devadas", "dummy description"); 
+	}
+
 }
