@@ -1,12 +1,12 @@
 apiVersion: 1.0.0
 metadata:
-  generateName: designer-test
+  name: designer-testazxyw
 projects:
   - name: jaxrs-app
     source:
       location: 'git@github.com:devadastv/jaxrs-app.git'
-      branch: master
       type: git
+      branch: master
 components:
   - mountSources: true
     endpoints:
@@ -14,16 +14,20 @@ components:
           path: /frontend
         name: designer-front-ui
         port: 9080
+      - attributes:
+          path: /api/explorer
+        name: openapi_ui
+        port: 9080
     memoryLimit: 2927M
     type: dockerimage
     alias: designer
-    image: 'devadastv.jfrog.io/devadas-docker/devadas:latest'
+    image: 'devadastv.jfrog.io/default-docker-local/designer:latest'
     env:
-      - name: CHE_PROJECTS_ROOT
-        value: /workspace/project
-  - type: chePlugin
-    id: redhat/vscode-xml/latest
+      - value: /workspace/project
+        name: CHE_PROJECTS_ROOT
+  - id: redhat/vscode-xml/latest
     memoryLimit: 512Mi
-  - type: chePlugin
-    id: redhat/vscode-yaml/latest
+    type: chePlugin
+  - id: redhat/vscode-yaml/latest
     memoryLimit: 512Mi
+    type: chePlugin
