@@ -34,4 +34,21 @@ public class PropertiesResource {
 	  return new ResponseItem("/employee/{id}", "dummy description"); 
 	}
 
+
+	@Path("/department/{id}") 
+	@GET 
+	@Produces(MediaType.APPLICATION_JSON) 
+	public ResponseItem get__department__id_() { 
+	  return new ResponseItem("/department/{id}", "dummy description"); 
+	}
+
+
+
+	@Path("/devadas") 
+	@GET 
+	@Produces(MediaType.APPLICATION_JSON) 
+	public ResponseItem get__devadas() { 
+	  return new ResponseItem("/devadas", "dummy description"); 
+	}
+
 }
