@@ -20,13 +20,6 @@ import javax.ws.rs.core.MediaType;
 @Path("")
 public class PropertiesResource {
 
-	@Path("/employee") 
-	@GET 
-	@Produces(MediaType.APPLICATION_JSON) 
-	public ResponseItem get__employee() { 
-	  return new ResponseItem("/employee", "dummy description"); 
-	}
-
 	@Path("/employee/{id}") 
 	@GET 
 	@Produces(MediaType.APPLICATION_JSON) 
@@ -35,11 +28,19 @@ public class PropertiesResource {
 	}
 
 
-	@Path("/department/{id}") 
+	@Path("/department") 
 	@GET 
 	@Produces(MediaType.APPLICATION_JSON) 
-	public ResponseItem get__department__id_() { 
-	  return new ResponseItem("/department/{id}", "dummy description"); 
+	public ResponseItem get__department() { 
+	  return new ResponseItem("/department", "list of departments"); 
+	}
+
+
+	@Path("/addEmployee") 
+	@GET 
+	@Produces(MediaType.APPLICATION_JSON) 
+	public ResponseItem get__addEmployee() { 
+	  return new ResponseItem("/addEmployee", "dummy description"); 
 	}
 
 }
